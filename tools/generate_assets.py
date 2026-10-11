@@ -6,7 +6,7 @@ import sys
 OUT = sys.argv[1] if len(sys.argv) > 1 else "assets"
 os.makedirs(OUT, exist_ok=True)
 
-BG = "#0b0f14"
+BG = "#0d1117"
 PANEL = "#0f151c"
 LINE = "#1f2933"
 TEXT = "#e6edf3"
@@ -36,11 +36,11 @@ def write(name: str, content: str) -> None:
 def banner() -> None:
     W, H = 1200, 300
     GROUND = 258
-    S = 1.35             # échelle de la voiture
+    S = 1.3              # échelle de la voiture
     DUR = 9.5            # durée de la boucle (s)
     DRIVE_END = 0.42     # fin du trajet (part de la boucle)
-    REAR = 44 * S        # contact de la roue arrière
-    FRONT = 190 * S      # nez de la voiture
+    REAR = 46 * S        # contact de la roue arrière
+    FRONT = 212 * S      # nez de la voiture (splitter compris)
     CAR_BASE = round(1135 - FRONT)   # position "statique" de la voiture (si pas d'animation)
     CAR_START = -round(FRONT + 40)   # départ (hors cadre à gauche)
     CAR_END = 1260                   # arrivée (hors cadre à droite)
@@ -82,46 +82,51 @@ def banner() -> None:
     {NOMOTION}
     """
 
+    wheel = lambda cx: f"""
+        <g transform="translate({cx} -14)">
+          <circle r="14" fill="#06090d" stroke="#aeb8c2" stroke-width="1.5"/>
+          <circle r="9" fill="#141b23" stroke="{ACCENT}" stroke-width="1"/>
+          <g class="spin">
+            <path d="M0,-8 L0,8 M-7.6,-2.5 L7.6,2.5 M-4.7,6.5 L4.7,-6.5 M-7.6,2.5 L7.6,-2.5 M-4.7,-6.5 L4.7,6.5" stroke="{ACCENT}" stroke-opacity=".75" stroke-width="1"/>
+          </g>
+          <circle r="2.2" fill="{ACCENT}"/>
+        </g>"""
+
     car = f"""
       <g transform="scale({S})">
         <!-- traînées de vitesse -->
         <g opacity=".55">
-          <rect x="-70" y="-33" width="64" height="1.2" fill="url(#streak)"/>
-          <rect x="-48" y="-24" width="42" height="1.2" fill="url(#streak)"/>
-          <rect x="-86" y="-16" width="80" height="1.2" fill="url(#streak)"/>
+          <rect x="-78" y="-38" width="68" height="1.2" fill="url(#streak)"/>
+          <rect x="-52" y="-27" width="42" height="1.2" fill="url(#streak)"/>
+          <rect x="-92" y="-17" width="82" height="1.2" fill="url(#streak)"/>
         </g>
-        <ellipse cx="98" cy="1.5" rx="96" ry="3.2" fill="#000" opacity=".55"/>
-        <!-- carrosserie -->
-        <path d="M6,-9 L6,-23 C6,-27 12,-29 24,-30.5 L58,-33 C70,-45 90,-47 108,-45.5 C122,-44 134,-37 150,-33 L180,-28 C187,-26.5 190,-23 190,-18 L190,-9 Z"
+        <ellipse cx="108" cy="1.5" rx="108" ry="3.4" fill="#000" opacity=".55"/>
+
+        <!-- aileron arrière : montants puis plan -->
+        <path d="M16,-37 L16,-28.5 M31,-37 L31,-29" stroke="{ACCENT}" stroke-opacity=".7" stroke-width="1.6"/>
+        <path d="M-4,-49 L44,-48 L40,-36.5 L1,-37.5 Z" fill="url(#body)" stroke="{ACCENT}" stroke-width="1.2" stroke-linejoin="round"/>
+        <path d="M-2,-45.5 L42,-44.5" stroke="{ACCENT}" stroke-opacity=".45" stroke-width="1"/>
+
+        <!-- carrosserie : nez bas, cabine avancée, capot moteur long -->
+        <path d="M8,-9 L5,-21 C5,-25.5 12,-27.5 22,-28.5 L70,-32.5 C84,-34.5 96,-41.5 111,-43.5 C125,-45 137,-44 145,-39.5 L161,-31.5 C173,-28.5 187,-26.5 199,-23.5 C206,-21.5 208,-18.5 207,-14 L206,-9 Z"
               fill="url(#body)" stroke="{ACCENT}" stroke-width="1.3" stroke-linejoin="round"/>
         <!-- vitre -->
-        <path d="M64,-34 C74,-43 90,-44.5 106,-43.5 C118,-42.5 130,-37.5 140,-34 Z" fill="{ACCENT}" opacity=".16"/>
-        <path d="M100,-43.7 L96,-34" stroke="{ACCENT}" stroke-opacity=".35" stroke-width="1"/>
-        <!-- ligne de caractère -->
-        <path d="M16,-21.5 C70,-23 130,-22 178,-20.5" stroke="{ACCENT}" stroke-opacity=".5" stroke-width="1" fill="none"/>
-        <!-- feux -->
-        <rect x="5" y="-24" width="4" height="3.4" rx="1.2" fill="{ACCENT}" class="pulse"/>
-        <path d="M183.5,-25.5 L190,-22.5 L190,-20 L181.5,-21.5 Z" fill="#fff" opacity=".92"/>
+        <path d="M115,-42.2 C127,-43.6 137,-43 142,-39.3 L150,-33.2 L112,-33.2 Z" fill="{ACCENT}" opacity=".16"/>
+        <path d="M112,-33.2 L152,-33.2" stroke="{ACCENT}" stroke-opacity=".4" stroke-width="1"/>
+        <!-- prise d'air latérale et ligne de livrée -->
+        <path d="M84,-29.5 L100,-27.5 M84,-25.5 L100,-23.5" stroke="{ACCENT}" stroke-opacity=".45" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M18,-14.5 C80,-15.5 150,-15 204,-14" stroke="{ACCENT}" stroke-opacity=".55" stroke-width="1.4" fill="none"/>
+        <!-- disque de numéro -->
+        <circle cx="128" cy="-24.5" r="7" fill="none" stroke="#e6edf3" stroke-opacity=".8" stroke-width="1"/>
+        <text x="128" y="-21.4" text-anchor="middle" font-family="{MONO}" font-size="8.5" font-weight="700" fill="#e6edf3" fill-opacity=".9">07</text>
+        <!-- feux, phare, splitter -->
+        <rect x="4" y="-23" width="4" height="3.4" rx="1.2" fill="{ACCENT}" class="pulse"/>
+        <path d="M195,-25 L206,-21.5 L206,-19.5 L192,-22.6 Z" fill="#fff" opacity=".92"/>
+        <path d="M184,-8.2 L214,-8.2" stroke="{ACCENT}" stroke-width="2" stroke-linecap="round"/>
         <!-- passages de roue -->
-        <path d="M27.5,-13 A16.5,16.5 0 0 1 60.5,-13 Z" fill="{BG}"/>
-        <path d="M133.5,-13 A16.5,16.5 0 0 1 166.5,-13 Z" fill="{BG}"/>
-        <!-- roues -->
-        <g transform="translate(44 -13)">
-          <circle r="13" fill="{BG}" stroke="#aeb8c2" stroke-width="1.5"/>
-          <circle r="8.5" fill="#141b23" stroke="{ACCENT}" stroke-width="1"/>
-          <g class="spin">
-            <path d="M0,-7.5 L0,7.5 M-7.1,-2.3 L7.1,2.3 M-4.4,6.1 L4.4,-6.1 M-7.1,2.3 L7.1,-2.3 M-4.4,-6.1 L4.4,6.1" stroke="{ACCENT}" stroke-opacity=".75" stroke-width="1"/>
-          </g>
-          <circle r="2" fill="{ACCENT}"/>
-        </g>
-        <g transform="translate(150 -13)">
-          <circle r="13" fill="{BG}" stroke="#aeb8c2" stroke-width="1.5"/>
-          <circle r="8.5" fill="#141b23" stroke="{ACCENT}" stroke-width="1"/>
-          <g class="spin">
-            <path d="M0,-7.5 L0,7.5 M-7.1,-2.3 L7.1,2.3 M-4.4,6.1 L4.4,-6.1 M-7.1,2.3 L7.1,-2.3 M-4.4,-6.1 L4.4,6.1" stroke="{ACCENT}" stroke-opacity=".75" stroke-width="1"/>
-          </g>
-          <circle r="2" fill="{ACCENT}"/>
-        </g>
+        <path d="M28,-14 A18,18 0 0 1 64,-14 Z" fill="{BG}"/>
+        <path d="M134,-14 A18,18 0 0 1 170,-14 Z" fill="{BG}"/>
+        <!-- roues -->{wheel(46)}{wheel(152)}
       </g>"""
 
     ticks = "".join(
@@ -170,7 +175,6 @@ def banner() -> None:
   </g>
 
   <text x="{W - 40}" y="46" text-anchor="end" font-family="{MONO}" font-size="13" fill="{DIM}" letter-spacing="1.5">AIX-EN-PROVENCE · FR</text>
-  <rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="15.5" fill="none" stroke="{LINE}"/>
 </svg>
 """
     write("banner.svg", svg)
@@ -268,7 +272,6 @@ def terminal() -> None:
   <g class="tfade">
     {chr(10).join(body)}
   </g>
-  <rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="13.5" fill="none" stroke="{LINE}"/>
 </svg>
 """
     write("terminal.svg", svg)
@@ -310,7 +313,6 @@ def cards() -> None:
     {NOMOTION}
   </style></defs>
   <rect width="{W}" height="{H}" rx="14" fill="{PANEL}"/>
-  <rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="13.5" fill="none" stroke="{LINE}"/>
   <rect class="edge" x="1" y="1" width="{W - 2}" height="{H - 2}" rx="13" fill="none" stroke="{ACCENT}" stroke-width="1.6"
         stroke-linecap="round" pathLength="1000" stroke-dasharray="130 870"/>
   <text x="28" y="44" font-family="{SANS}" font-size="22" font-weight="650" fill="{TEXT}">{esc(title)}</text>
