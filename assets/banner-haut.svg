@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 230" width="1200" height="230" role="img" aria-label="Alex Goncalves Rodrigues, développeur et étudiant en cybersécurité.">
+  <title>Alex Goncalves Rodrigues</title>
+  <defs>
+    <style>
+    .cover { animation: sweep 9.5s cubic-bezier(.2,.65,.3,1) infinite; }
+    .fade  { animation: fade  9.5s linear infinite; }
+    @keyframes sweep { 0% { transform: translateX(-1350px); } 36.00%, 100% { transform: translateX(0); } }
+    @keyframes fade  { 0%, 72% { opacity: 1; } 88%, 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce){*{animation:none !important}}
+    </style>
+    <linearGradient id="og" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffb63d"/><stop offset="1" stop-color="#f0630b"/></linearGradient>
+    <linearGradient id="wedge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#171a21"/><stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+    <filter id="glow" x="-200%" y="-5%" width="500%" height="110%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+  <rect width="1200" height="230" rx="16" fill="#0d1117"/>
+  <g class="fade">
+    <polygon points="782,0 1200,0 1200,230 696,230" fill="url(#wedge)"/>
+    <polygon points="760,0 784,0 698,230 674,230" fill="url(#og)"/>
+    <polygon points="808,0 816,0 730,230 722,230" fill="#fff" opacity=".4"/>
+    <polygon points="834,0 838,0 752,230 748,230" fill="url(#og)" opacity=".6"/>
+    <g transform="translate(96 0) skewX(-10)">
+      <text x="0" y="116" font-family="'Arial Black', 'Segoe UI Black', 'Helvetica Neue', Arial, sans-serif" font-size="92" font-weight="900" letter-spacing="2" fill="#f4f4f5">ALEX</text>
+      <text x="0" y="158" font-family="'Arial Black', 'Segoe UI Black', 'Helvetica Neue', Arial, sans-serif" font-size="29" font-weight="900" letter-spacing="5" fill="url(#og)">GONCALVES RODRIGUES</text>
+      <text x="2" y="190" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="14" letter-spacing="3" fill="#9ba1a9">DÉVELOPPEUR / CYBERSÉCURITÉ / MSC EPITECH</text>
+    </g>
+    <text x="1160" y="46" text-anchor="end" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="13" fill="#9ba1a9" letter-spacing="2">AIX-EN-PROVENCE · FR</text>
+  </g>
+  <!-- rideau oblique qui découvre le contenu, avec un liseré lumineux sur son bord -->
+  <g class="cover">
+    <polygon points="1406,0 4320,0 4320,230 1320,230" fill="#0d1117"/>
+    <polygon points="1403,0 1409,0 1323,230 1317,230" fill="#ff9b21" opacity=".7" filter="url(#glow)"/>
+    <polygon points="1404.4,0 1407.6,0 1321.6,230 1318.4,230" fill="url(#og)"/>
+  </g>
+</svg>

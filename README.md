@@ -1,12 +1,10 @@
 <!-- Repo à créer : nom EXACT = G-R-Alex (public). Les visuels sont dans assets/, générés par tools/generate_assets.py -->
 
 <p align="center">
-  <img src="assets/banner-sans-voiture.svg" width="100%" alt="Alex Goncalves Rodrigues, développeur et étudiant en cybersécurité."/>
+  <img src="assets/banner-haut.svg" width="100%" alt="Alex Goncalves Rodrigues, développeur et étudiant en cybersécurité."/><br>
+  <img src="assets/voiture.png" width="100%" alt="Ma voiture"/><br>
+  <img src="assets/route.svg" width="100%" alt=""/>
 </p>
-<p align="center">
-  <img src="assets/voiture.png" width="100%" alt="Ma voiture"/>
-</p>
-
 
 <p align="center">
   <img src="assets/terminal.svg" width="100%" alt="Terminal : alex, étudiant MSc à Epitech ; stack php, laravel, java, python, godot, docker, git, linux ; focus cybersécurité, devsecops, tryhackme, hack the box."/>

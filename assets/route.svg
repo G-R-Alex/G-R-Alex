@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 56" width="1200" height="56" role="presentation" aria-hidden="true">
+  <defs>
+    <style>
+    .trail { animation: grow 9.5s cubic-bezier(.2,.65,.3,1) infinite; transform-box: fill-box; transform-origin: 0 50%; }
+    .head  { animation: run  9.5s cubic-bezier(.2,.65,.3,1) infinite; }
+    .fade  { animation: fade 9.5s linear infinite; }
+    @keyframes grow { 0% { transform: scaleX(0); } 36.00%, 100% { transform: scaleX(1); } }
+    @keyframes run  { 0% { transform: translateX(0); } 36.00%, 100% { transform: translateX(1240px); } }
+    @keyframes fade { 0%, 72% { opacity: 1; } 88%, 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce){*{animation:none !important}}
+    </style>
+    <filter id="glow" x="-5%" y="-300%" width="110%" height="700%"><feGaussianBlur stdDeviation="3.4"/></filter>
+    <filter id="blur" x="-300%" y="-300%" width="700%" height="700%"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+  <rect x="0" y="12" width="1200" height="1.2" fill="#2a2e36"/>
+  <polygon points="8,24 34,24 30,26.4 4,26.4" fill="#2a2e36"/><polygon points="78,24 104,24 100,26.4 74,26.4" fill="#2a2e36"/><polygon points="148,24 174,24 170,26.4 144,26.4" fill="#2a2e36"/><polygon points="218,24 244,24 240,26.4 214,26.4" fill="#2a2e36"/><polygon points="288,24 314,24 310,26.4 284,26.4" fill="#2a2e36"/><polygon points="358,24 384,24 380,26.4 354,26.4" fill="#2a2e36"/><polygon points="428,24 454,24 450,26.4 424,26.4" fill="#2a2e36"/><polygon points="498,24 524,24 520,26.4 494,26.4" fill="#2a2e36"/><polygon points="568,24 594,24 590,26.4 564,26.4" fill="#2a2e36"/><polygon points="638,24 664,24 660,26.4 634,26.4" fill="#2a2e36"/><polygon points="708,24 734,24 730,26.4 704,26.4" fill="#2a2e36"/><polygon points="778,24 804,24 800,26.4 774,26.4" fill="#2a2e36"/><polygon points="848,24 874,24 870,26.4 844,26.4" fill="#2a2e36"/><polygon points="918,24 944,24 940,26.4 914,26.4" fill="#2a2e36"/><polygon points="988,24 1014,24 1010,26.4 984,26.4" fill="#2a2e36"/><polygon points="1058,24 1084,24 1080,26.4 1054,26.4" fill="#2a2e36"/><polygon points="1128,24 1154,24 1150,26.4 1124,26.4" fill="#2a2e36"/><polygon points="1198,24 1224,24 1220,26.4 1194,26.4" fill="#2a2e36"/>
+  <g class="fade">
+    <rect class="trail" x="0" y="9" width="1200" height="6" fill="#ff9b21" opacity=".6" filter="url(#glow)"/>
+    <rect class="trail" x="0" y="10.6" width="1200" height="2.2" rx="1" fill="#ff9b21" opacity=".95"/>
+    <rect class="trail" x="0" y="15.2" width="1200" height="1.2" rx=".6" fill="#f0630b" opacity=".6"/>
+    <g transform="translate(0 11.7)"><g class="head">
+      <circle r="9" fill="#ff9b21" opacity=".8" filter="url(#blur)"/>
+      <circle r="2.6" fill="#fff"/>
+    </g></g>
+  </g>
+</svg>
