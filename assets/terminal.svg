@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 290" width="860" height="290" role="img" aria-label="Terminal : whoami, cat stack.txt, focus">
   <title>Terminal</title>
-  <defs><style>.tfade { animation: tfade 15.0s linear infinite; }
+  <defs><linearGradient id="og" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffb63d"/><stop offset="1" stop-color="#f0630b"/></linearGradient><style>.tfade { animation: tfade 15.0s linear infinite; }
 .blink { animation: blink 1.05s steps(1) infinite; }
 @keyframes tfade { 0%, 86.67% { opacity: 1; } 93.33%, 100% { opacity: 0; } }
 @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
@@ -30,27 +30,29 @@
 @keyframes v5 { 0%, 48.33% { opacity: 0; } 48.67%, 57.67% { opacity: 1; } 58.00%, 100% { opacity: 0; } }
 .v5 { opacity: 0; animation: v5 15.0s linear infinite; }
 @keyframes last { 0%, 59.33% { opacity: 0; } 60.00%, 100% { opacity: 1; } } .last { animation: last 15.0s linear infinite; }</style></defs>
-  <rect width="860" height="290" rx="14" fill="#0f151c"/>
-  <path d="M0,14 A14,14 0 0 1 14,0 H846 A14,14 0 0 1 860,14 V44 H0 Z" fill="#131a22"/>
-  <rect y="44" width="860" height="1" fill="#1f2933"/>
-  <circle cx="28" cy="22" r="5" fill="#2b343e"/><circle cx="48" cy="22" r="5" fill="#2b343e"/><circle cx="68" cy="22" r="5" fill="#2b343e"/>
-  <text x="430.0" y="27" text-anchor="middle" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="12.5" fill="#5b6772" letter-spacing=".6">alex@g-r-alex: ~</text>
+  <rect width="860" height="290" rx="14" fill="#121419"/>
+  <path d="M0,14 A14,14 0 0 1 14,0 H846 A14,14 0 0 1 860,14 V44 H0 Z" fill="#0f1115"/>
+  <polygon points="26,15 62,15 55,29 19,29" fill="url(#og)"/>
+  <polygon points="68,15 78,15 71,29 61,29" fill="#2a2e36"/>
+  <polygon points="84,15 90,15 83,29 77,29" fill="#2a2e36"/>
+  <text x="832" y="27" text-anchor="end" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="12" fill="#626973" letter-spacing="1.5">ALEX@G-R-ALEX ~</text>
+  <rect y="43" width="860" height="2" fill="url(#og)" opacity=".85"/>
   <g class="tfade">
-    <text x="30" y="90" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#5ad1b5">$</text>
-<text x="49.2" y="90" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#e6edf3" textLength="57.6" lengthAdjust="spacing" xml:space="preserve">whoami</text>
-<g class="c0"><rect x="30" y="73" width="116.8" height="24" fill="#0f151c"/><g class="v0"><rect class="blink" x="30" y="75" width="9.6" height="20" fill="#5ad1b5"/></g></g>
-<text x="30.0" y="120" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#8b98a5" textLength="451.2" lengthAdjust="spacing" xml:space="preserve">alex — étudiant MSc @ Epitech · Aix-en-Provence</text>
-<g class="c1"><rect x="30" y="103" width="491.2" height="24" fill="#0f151c"/></g>
-<text x="30" y="150" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#5ad1b5">$</text>
-<text x="49.2" y="150" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#e6edf3" textLength="124.8" lengthAdjust="spacing" xml:space="preserve">cat stack.txt</text>
-<g class="c2"><rect x="30" y="133" width="184.0" height="24" fill="#0f151c"/><g class="v2"><rect class="blink" x="30" y="135" width="9.6" height="20" fill="#5ad1b5"/></g></g>
-<text x="30.0" y="180" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#8b98a5" textLength="508.8" lengthAdjust="spacing" xml:space="preserve">php  laravel  java  python  godot  docker  git  linux</text>
-<g class="c3"><rect x="30" y="163" width="548.8" height="24" fill="#0f151c"/></g>
-<text x="30" y="210" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#5ad1b5">$</text>
-<text x="49.2" y="210" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#e6edf3" textLength="124.8" lengthAdjust="spacing" xml:space="preserve">./focus --now</text>
-<g class="c4"><rect x="30" y="193" width="184.0" height="24" fill="#0f151c"/><g class="v4"><rect class="blink" x="30" y="195" width="9.6" height="20" fill="#5ad1b5"/></g></g>
-<text x="30.0" y="240" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#8b98a5" textLength="499.2" lengthAdjust="spacing" xml:space="preserve">cybersécurité · devsecops · tryhackme · hack the box</text>
-<g class="c5"><rect x="30" y="223" width="539.2" height="24" fill="#0f151c"/></g>
-<g class="last"><text x="30" y="270" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#5ad1b5">$</text><rect class="blink" x="49.2" y="255" width="9.6" height="20" fill="#5ad1b5"/></g>
+    <text x="30" y="90" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#ff9b21">$</text>
+<text x="49.2" y="90" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#f4f4f5" textLength="57.6" lengthAdjust="spacing" xml:space="preserve">whoami</text>
+<g class="c0"><rect x="30" y="73" width="116.8" height="24" fill="#121419"/><g class="v0"><rect class="blink" x="30" y="75" width="9.6" height="20" fill="#ff9b21"/></g></g>
+<text x="30.0" y="120" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#9ba1a9" textLength="451.2" lengthAdjust="spacing" xml:space="preserve">alex — étudiant MSc @ Epitech · Aix-en-Provence</text>
+<g class="c1"><rect x="30" y="103" width="491.2" height="24" fill="#121419"/></g>
+<text x="30" y="150" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#ff9b21">$</text>
+<text x="49.2" y="150" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#f4f4f5" textLength="124.8" lengthAdjust="spacing" xml:space="preserve">cat stack.txt</text>
+<g class="c2"><rect x="30" y="133" width="184.0" height="24" fill="#121419"/><g class="v2"><rect class="blink" x="30" y="135" width="9.6" height="20" fill="#ff9b21"/></g></g>
+<text x="30.0" y="180" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#9ba1a9" textLength="508.8" lengthAdjust="spacing" xml:space="preserve">php  laravel  java  python  godot  docker  git  linux</text>
+<g class="c3"><rect x="30" y="163" width="548.8" height="24" fill="#121419"/></g>
+<text x="30" y="210" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#ff9b21">$</text>
+<text x="49.2" y="210" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#f4f4f5" textLength="124.8" lengthAdjust="spacing" xml:space="preserve">./focus --now</text>
+<g class="c4"><rect x="30" y="193" width="184.0" height="24" fill="#121419"/><g class="v4"><rect class="blink" x="30" y="195" width="9.6" height="20" fill="#ff9b21"/></g></g>
+<text x="30.0" y="240" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#9ba1a9" textLength="499.2" lengthAdjust="spacing" xml:space="preserve">cybersécurité · devsecops · tryhackme · hack the box</text>
+<g class="c5"><rect x="30" y="223" width="539.2" height="24" fill="#121419"/></g>
+<g class="last"><text x="30" y="270" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#ff9b21">$</text><rect class="blink" x="49.2" y="255" width="9.6" height="20" fill="#ff9b21"/></g>
   </g>
 </svg>

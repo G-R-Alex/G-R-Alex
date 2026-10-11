@@ -1,14 +1,18 @@
 <!-- Repo à créer : nom EXACT = G-R-Alex (public). Les visuels sont dans assets/, générés par tools/generate_assets.py -->
 
 <p align="center">
-  <img src="assets/banner.svg" width="100%" alt="Alex Goncalves Rodrigues, développeur et étudiant en cybersécurité. Une voiture traverse la bannière en laissant des traces de pneus."/>
+  <img src="assets/banner-sans-voiture.svg" width="100%" alt="Alex Goncalves Rodrigues, développeur et étudiant en cybersécurité."/>
 </p>
+<p align="center">
+  <img src="assets/voiture.png" width="100%" alt="Ma voiture"/>
+</p>
+
 
 <p align="center">
   <img src="assets/terminal.svg" width="100%" alt="Terminal : alex, étudiant MSc à Epitech ; stack php, laravel, java, python, godot, docker, git, linux ; focus cybersécurité, devsecops, tryhackme, hack the box."/>
 </p>
 
-### À propos
+<img src="assets/header-apropos.svg" width="100%" alt="À propos"/>
 
 Étudiant en MSc à Epitech (après un BUT Informatique à l'IUT Aix-Marseille), je construis des projets concrets en web et en logiciel.
 
@@ -18,7 +22,7 @@ Hors clavier : snowboard, course auto, et un peu de CS2.
 
 <p align="center"><img src="assets/divider.svg" width="100%" alt=""/></p>
 
-### Stack
+<img src="assets/header-stack.svg" width="100%" alt="Stack"/>
 
 <p align="center">
   <img src="assets/stack.svg" width="100%" alt="Développement : PHP, Laravel, Java, Python, JavaScript, HTML/CSS, Godot. Outils : Git, GitHub, Docker, Linux, Bash. Sécurité : sécurité web, XSS, TryHackMe, Hack The Box, DevSecOps en exploration."/>
@@ -26,7 +30,7 @@ Hors clavier : snowboard, course auto, et un peu de CS2.
 
 <p align="center"><img src="assets/divider.svg" width="100%" alt=""/></p>
 
-### Projets
+<img src="assets/header-projets.svg" width="100%" alt="Projets"/>
 
 <p align="center">
   <a href="https://github.com/G-R-Alex/security-linter"><img src="assets/card-security-linter.svg" width="410" alt="security-linter : bibliothèque PHP qui détecte et corrige les failles XSS"/></a>
@@ -37,10 +41,12 @@ Hors clavier : snowboard, course auto, et un peu de CS2.
 
 <p align="center"><img src="assets/divider.svg" width="100%" alt=""/></p>
 
-### Contact
+<img src="assets/header-contact.svg" width="100%" alt="Contact"/>
 
-[GitHub](https://github.com/G-R-Alex)
-<!-- Décommente et remplis quand tu veux :
- · [LinkedIn](https://www.linkedin.com/in/TON-PROFIL)
- · [Mail](mailto:ton.email@exemple.com)
+<p align="center">
+  <a href="https://github.com/G-R-Alex"><img src="assets/btn-github.svg" width="260" alt="Mon profil GitHub, G-R-Alex"/></a>
+</p>
+
+<!-- Ajoute ici tes autres liens quand tu veux :
+[LinkedIn](https://www.linkedin.com/in/TON-PROFIL) · [Mail](mailto:ton.email@exemple.com)
 -->

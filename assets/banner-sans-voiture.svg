@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="Alex Goncalves Rodrigues, développeur et étudiant en cybersécurité.">
+  <title>Alex Goncalves Rodrigues</title>
+  <defs>
+    <style>
+    .car   { animation: drive 9.5s cubic-bezier(.2,.65,.3,1) infinite; }
+    .cover { animation: sweep 9.5s cubic-bezier(.2,.65,.3,1) infinite; }
+    .trail { animation: grow  9.5s cubic-bezier(.2,.65,.3,1) infinite; transform-box: fill-box; transform-origin: 0 50%; }
+    .fade  { animation: fade  9.5s linear infinite; }
+    .spin  { animation: spin .42s linear infinite; transform-box: fill-box; transform-origin: center; }
+    .pulse { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes drive { 0% { transform: translateX(-1190px); } 36.00%, 100% { transform: translateX(0px); } }
+    @keyframes sweep { 0% { transform: translateX(-1320.4px); } 36.00% { transform: translateX(-130.4px); } 48.00%, 100% { transform: translateX(0); } }
+    @keyframes grow  { 0% { transform: scaleX(0); } 36.00%, 100% { transform: scaleX(1.23210); } }
+    @keyframes fade  { 0%, 72% { opacity: 1; } 88%, 100% { opacity: 0; } }
+    @keyframes spin  { to { transform: rotate(360deg); } }
+    @keyframes pulse { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce){*{animation:none !important}}
+    </style>
+    <linearGradient id="og" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffb63d"/><stop offset="1" stop-color="#f0630b"/></linearGradient>
+    <linearGradient id="wedge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#171a21"/><stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22262e"/><stop offset="1" stop-color="#101319"/>
+    </linearGradient>
+    <linearGradient id="streak" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff9b21" stop-opacity="0"/><stop offset="1" stop-color="#ff9b21" stop-opacity=".9"/>
+    </linearGradient>
+    <filter id="glow" x="-5%" y="-300%" width="110%" height="700%"><feGaussianBlur stdDeviation="3.4"/></filter>
+  </defs>
+
+  <rect width="1200" height="320" rx="16" fill="#0d1117"/>
+
+  <!-- décor et texte : révélés par le passage de la voiture -->
+  <g class="fade">
+    <polygon points="782,0 1200,0 1200,320 662,320" fill="url(#wedge)"/>
+    <polygon points="760,0 784,0 664,320 640,320" fill="url(#og)"/>
+    <polygon points="808,0 816,0 696,320 688,320" fill="#fff" opacity=".4"/>
+    <polygon points="834,0 838,0 718,320 714,320" fill="url(#og)" opacity=".6"/>
+    <g transform="translate(96 0) skewX(-10)">
+      <text x="0" y="116" font-family="'Arial Black', 'Segoe UI Black', 'Helvetica Neue', Arial, sans-serif" font-size="92" font-weight="900" letter-spacing="2" fill="#f4f4f5">ALEX</text>
+      <text x="0" y="158" font-family="'Arial Black', 'Segoe UI Black', 'Helvetica Neue', Arial, sans-serif" font-size="29" font-weight="900" letter-spacing="5" fill="url(#og)">GONCALVES RODRIGUES</text>
+      <text x="2" y="190" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="14" letter-spacing="3" fill="#9ba1a9">DÉVELOPPEUR / CYBERSÉCURITÉ / MSC EPITECH</text>
+    </g>
+    <text x="1160" y="46" text-anchor="end" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="13" fill="#9ba1a9" letter-spacing="2">AIX-EN-PROVENCE · FR</text>
+  </g>
+  <rect class="cover" x="1280" y="0" width="2600" height="320" fill="#0d1117"/>
+
+  <!-- route et traces de pneus -->
+  <rect x="0" y="262" width="1200" height="1.2" fill="#2a2e36"/>
+  <polygon points="8,274 34,274 30,276.4 4,276.4" fill="#2a2e36"/><polygon points="78,274 104,274 100,276.4 74,276.4" fill="#2a2e36"/><polygon points="148,274 174,274 170,276.4 144,276.4" fill="#2a2e36"/><polygon points="218,274 244,274 240,276.4 214,276.4" fill="#2a2e36"/><polygon points="288,274 314,274 310,276.4 284,276.4" fill="#2a2e36"/><polygon points="358,274 384,274 380,276.4 354,276.4" fill="#2a2e36"/><polygon points="428,274 454,274 450,276.4 424,276.4" fill="#2a2e36"/><polygon points="498,274 524,274 520,276.4 494,276.4" fill="#2a2e36"/><polygon points="568,274 594,274 590,276.4 564,276.4" fill="#2a2e36"/><polygon points="638,274 664,274 660,276.4 634,276.4" fill="#2a2e36"/><polygon points="708,274 734,274 730,276.4 704,276.4" fill="#2a2e36"/><polygon points="778,274 804,274 800,276.4 774,276.4" fill="#2a2e36"/><polygon points="848,274 874,274 870,276.4 844,276.4" fill="#2a2e36"/><polygon points="918,274 944,274 940,276.4 914,276.4" fill="#2a2e36"/><polygon points="988,274 1014,274 1010,276.4 984,276.4" fill="#2a2e36"/><polygon points="1058,274 1084,274 1080,276.4 1054,276.4" fill="#2a2e36"/><polygon points="1128,274 1154,274 1150,276.4 1124,276.4" fill="#2a2e36"/><polygon points="1198,274 1224,274 1220,276.4 1194,276.4" fill="#2a2e36"/>
+  <g class="fade">
+    <rect class="trail" x="-256.2" y="259" width="1190.0" height="6" fill="#ff9b21" opacity=".6" filter="url(#glow)"/>
+    <rect class="trail" x="-256.2" y="260.6" width="1190.0" height="2.2" rx="1" fill="#ff9b21" opacity=".95"/>
+    <rect class="trail" x="-256.2" y="265.2" width="1190.0" height="1.2" rx=".6" fill="#f0630b" opacity=".6"/>
+  </g>
+
+  
+</svg>
