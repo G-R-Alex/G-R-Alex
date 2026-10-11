@@ -155,7 +155,6 @@ def banner() -> None:
       <text x="0" y="158" font-family="{HEAD}" font-size="29" font-weight="900" letter-spacing="5" fill="url(#og)">GONCALVES RODRIGUES</text>
       <text x="2" y="190" font-family="{MONO}" font-size="14" letter-spacing="3" fill="{MUTED}">DÉVELOPPEUR / CYBERSÉCURITÉ / MSC EPITECH</text>
     </g>
-    <text x="{W - 40}" y="46" text-anchor="end" font-family="{MONO}" font-size="13" fill="{MUTED}" letter-spacing="2">AIX-EN-PROVENCE · FR</text>
   </g>
   <rect class="cover" x="{COVER_BASE}" y="0" width="2600" height="{H}" fill="{BG}"/>
 
@@ -194,11 +193,11 @@ def terminal() -> None:
 
     lines = [
         ("whoami", "cmd", 0.4, 1.3),
-        ("alex — étudiant MSc @ Epitech · Aix-en-Provence", "out", 1.6, 2.4),
+        ("alex — étudiant MSc @ Epitech", "out", 1.6, 2.4),
         ("cat stack.txt", "cmd", 3.0, 4.1),
         ("php  laravel  java  python  godot  docker  git  linux", "out", 4.4, 5.3),
         ("./focus --now", "cmd", 6.0, 7.0),
-        ("cybersécurité · devsecops · tryhackme · hack the box", "out", 7.3, 8.3),
+        ("cybersécurité · devsecops", "out", 7.3, 8.3),
     ]
     FADE_START, FADE_END = 13.0, 14.0
 
@@ -254,7 +253,7 @@ def terminal() -> None:
         f'<rect class="blink" x="{X0 + 2 * CW}" y="{y_last - 15}" width="{CW:.1f}" height="20" fill="{ACCENT}"/></g>'
     )
 
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="Terminal : whoami, cat stack.txt, focus">
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="Terminal : alex, étudiant MSc à Epitech ; stack php, laravel, java, python, godot, docker, git, linux ; focus cybersécurité, devsecops.">
   <title>Terminal</title>
   <defs>{OG}<style>{chr(10).join(css)}</style></defs>
   <rect width="{W}" height="{H}" rx="14" fill="{PANEL}"/>
@@ -277,7 +276,7 @@ def terminal() -> None:
 # ---------------------------------------------------------------------------
 def headers() -> None:
     W, H = 860, 52
-    items = [("header-apropos", "À PROPOS"), ("header-stack", "STACK"), ("header-projets", "PROJETS"), ("header-contact", "CONTACT")]
+    items = [("header-apropos", "À PROPOS"), ("header-stack", "STACK"), ("header-contact", "CONTACT")]
     for fname, label in items:
         tw = len(label) * 19 + 40
         x1 = tw + 30
@@ -341,9 +340,9 @@ def divider() -> None:
 def stack() -> None:
     W = 860
     rows = [
-        ("DÉVELOPPEMENT", ["PHP", "Laravel", "Java", "Python", "JavaScript", "HTML / CSS", "Godot"]),
-        ("OUTILS", ["Git", "GitHub", "Docker", "Linux", "Bash"]),
-        ("SÉCURITÉ", ["Sécurité web", "XSS", "TryHackMe", "Hack The Box", "DevSecOps · en exploration"]),
+        ("DÉVELOPPEMENT", ["PHP", "Laravel", "Java", "Python", "JavaScript", "HTML / CSS", "Svelte", "SQL"]),
+        ("OUTILS", ["Git", "GitHub", "Docker", "Linux", "Bash", "AWS"]),
+        ("SÉCURITÉ", ["Sécurité web", "XSS", "DevSecOps · en exploration"]),
     ]
     ROW_H = 76
     H = 24 + ROW_H * len(rows)
@@ -377,73 +376,7 @@ def stack() -> None:
 
 
 # ---------------------------------------------------------------------------
-# 6. CARTES PROJETS
-# ---------------------------------------------------------------------------
-def cards() -> None:
-    W, H = 420, 176
-    CH = 24
-    poly = f"0,0 {W - CH},0 {W},{CH} {W},{H} {CH},{H} 0,{H - CH}"
-    items = [
-        ("card-security-linter", "security-linter", "Analyse un projet PHP, détecte les failles XSS", "et les corrige automatiquement.", ["PHP", "Composer", "XSS"], "PUBLIC", 0.0),
-        ("card-wikivalorant", "WikiValorant", "Wiki non officiel en français : principe du jeu,", "rôles des agents, rangs et cartes.", ["Wiki", "FR"], "PUBLIC", 1.6),
-        ("card-slimepocalypse", "Slimepocalypse", "Tower defense coopératif sous Godot 4,", "développé à deux, ambiance ferme et vagues.", ["Godot 4", "Co-op"], "EN COURS", 3.2),
-        ("card-time-manager", "Time Manager", "Application de gestion du temps :", "backend + frontend, projet Epitech.", ["Backend", "Frontend", "Epitech"], "EN COURS", 4.8),
-    ]
-    for fname, title, l1, l2, tags, status, delay in items:
-        chips, x = [], 64
-        for t in tags:
-            w = len(t) * 7.6 + 20
-            chips.append(
-                f'<polygon points="{x + 6:.1f},128 {x + w + 6:.1f},128 {x + w:.1f},154 {x:.1f},154" fill="none" stroke="#383c46" stroke-width="1.1"/>'
-                f'<text x="{x + w / 2 + 3:.1f}" y="145.2" text-anchor="middle" font-family="{MONO}" font-size="12" fill="{ACCENT}">{esc(t)}</text>'
-            )
-            x += w + 14
-        live = status == "EN COURS"
-        bw = len(status) * 7.6 + 26
-        bx = W - 24 - bw - CH * 0.3
-        if live:
-            badge = (
-                f'<polygon class="live" points="{bx + 8:.1f},22 {bx + bw + 8:.1f},22 {bx + bw:.1f},46 {bx:.1f},46" fill="url(#og)"/>'
-                f'<text x="{bx + bw / 2 + 4:.1f}" y="38.2" text-anchor="middle" font-family="{MONO}" font-size="10.5" font-weight="700" letter-spacing="1" fill="{DARK}">{status}</text>'
-            )
-        else:
-            badge = (
-                f'<polygon points="{bx + 8:.1f},22 {bx + bw + 8:.1f},22 {bx + bw:.1f},46 {bx:.1f},46" fill="none" stroke="{ACCENT}" stroke-width="1.2"/>'
-                f'<text x="{bx + bw / 2 + 4:.1f}" y="38.2" text-anchor="middle" font-family="{MONO}" font-size="10.5" font-weight="700" letter-spacing="1" fill="{ACCENT}">{status}</text>'
-            )
-        svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="Projet {esc(title)}">
-  <title>{esc(title)}</title>
-  <defs>{OG}
-    <clipPath id="c"><polygon points="{poly}"/></clipPath>
-    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
-    </linearGradient>
-    <style>
-      .shine {{ animation: shine 6.5s ease-in-out infinite; animation-delay: -{delay}s; }}
-      .live  {{ animation: live 1.8s ease-in-out infinite; }}
-      @keyframes shine {{ 0% {{ transform: translateX(0); }} 50%, 100% {{ transform: translateX(660px); }} }}
-      @keyframes live  {{ 0%,100% {{ opacity: .75; }} 50% {{ opacity: 1; }} }}
-      {NOMOTION}
-    </style>
-  </defs>
-  <polygon points="{poly}" fill="{PANEL}"/>
-  <g clip-path="url(#c)">
-    <polygon points="26,0 40,0 0,{H} -14,{H}" fill="url(#og)"/>
-    <polygon points="46,0 50,0 10,{H} 6,{H}" fill="#fff" opacity=".35"/>
-    <g transform="skewX(-20)"><rect class="shine" x="-180" y="-10" width="110" height="{H + 20}" fill="url(#shine)"/></g>
-  </g>
-  <text x="68" y="44" font-family="{HEAD}" font-size="21" font-weight="900" font-style="italic" fill="{TEXT}">{esc(title)}</text>
-  {badge}
-  <text x="64" y="82" font-family="{SANS}" font-size="14.5" fill="{MUTED}">{esc(l1)}</text>
-  <text x="64" y="104" font-family="{SANS}" font-size="14.5" fill="{MUTED}">{esc(l2)}</text>
-  {''.join(chips)}
-</svg>
-"""
-        write(fname + ".svg", svg)
-
-
-# ---------------------------------------------------------------------------
-# 7. BOUTON GITHUB
+# 6. BOUTON GITHUB
 # ---------------------------------------------------------------------------
 def button() -> None:
     W, H = 260, 52
@@ -474,5 +407,4 @@ if __name__ == "__main__":
     headers()
     divider()
     stack()
-    cards()
     button()

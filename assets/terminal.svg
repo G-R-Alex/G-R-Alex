@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 290" width="860" height="290" role="img" aria-label="Terminal : whoami, cat stack.txt, focus">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 290" width="860" height="290" role="img" aria-label="Terminal : alex, étudiant MSc à Epitech ; stack php, laravel, java, python, godot, docker, git, linux ; focus cybersécurité, devsecops.">
   <title>Terminal</title>
   <defs><linearGradient id="og" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffb63d"/><stop offset="1" stop-color="#f0630b"/></linearGradient><style>.tfade { animation: tfade 15.0s linear infinite; }
 .blink { animation: blink 1.05s steps(1) infinite; }
@@ -9,8 +9,8 @@
 .c0 { transform: translateX(82.8px); animation: c0 15.0s infinite; }
 @keyframes v0 { 0%, 2.33% { opacity: 0; } 2.67%, 11.00% { opacity: 1; } 11.33%, 100% { opacity: 0; } }
 .v0 { opacity: 0; animation: v0 15.0s linear infinite; }
-@keyframes c1 { 0%, 10.67% { transform: translateX(0); animation-timing-function: linear; } 16.00%, 100% { transform: translateX(457.2px); } }
-.c1 { transform: translateX(457.2px); animation: c1 15.0s infinite; }
+@keyframes c1 { 0%, 10.67% { transform: translateX(0); animation-timing-function: linear; } 16.00%, 100% { transform: translateX(284.4px); } }
+.c1 { transform: translateX(284.4px); animation: c1 15.0s infinite; }
 @keyframes v1 { 0%, 10.33% { opacity: 0; } 10.67%, 18.33% { opacity: 1; } 18.67%, 100% { opacity: 0; } }
 .v1 { opacity: 0; animation: v1 15.0s linear infinite; }
 @keyframes c2 { 0%, 20.00% { transform: translateX(0); animation-timing-function: steps(15, end); } 27.33%, 100% { transform: translateX(150.0px); } }
@@ -25,8 +25,8 @@
 .c4 { transform: translateX(150.0px); animation: c4 15.0s infinite; }
 @keyframes v4 { 0%, 39.67% { opacity: 0; } 40.00%, 49.00% { opacity: 1; } 49.33%, 100% { opacity: 0; } }
 .v4 { opacity: 0; animation: v4 15.0s linear infinite; }
-@keyframes c5 { 0%, 48.67% { transform: translateX(0); animation-timing-function: linear; } 55.33%, 100% { transform: translateX(505.2px); } }
-.c5 { transform: translateX(505.2px); animation: c5 15.0s infinite; }
+@keyframes c5 { 0%, 48.67% { transform: translateX(0); animation-timing-function: linear; } 55.33%, 100% { transform: translateX(246.0px); } }
+.c5 { transform: translateX(246.0px); animation: c5 15.0s infinite; }
 @keyframes v5 { 0%, 48.33% { opacity: 0; } 48.67%, 57.67% { opacity: 1; } 58.00%, 100% { opacity: 0; } }
 .v5 { opacity: 0; animation: v5 15.0s linear infinite; }
 @keyframes last { 0%, 59.33% { opacity: 0; } 60.00%, 100% { opacity: 1; } } .last { animation: last 15.0s linear infinite; }</style></defs>
@@ -41,8 +41,8 @@
     <text x="30" y="90" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#ff9b21">$</text>
 <text x="49.2" y="90" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#f4f4f5" textLength="57.6" lengthAdjust="spacing" xml:space="preserve">whoami</text>
 <g class="c0"><rect x="30" y="73" width="116.8" height="24" fill="#121419"/><g class="v0"><rect class="blink" x="30" y="75" width="9.6" height="20" fill="#ff9b21"/></g></g>
-<text x="30.0" y="120" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#9ba1a9" textLength="451.2" lengthAdjust="spacing" xml:space="preserve">alex — étudiant MSc @ Epitech · Aix-en-Provence</text>
-<g class="c1"><rect x="30" y="103" width="491.2" height="24" fill="#121419"/></g>
+<text x="30.0" y="120" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#9ba1a9" textLength="278.4" lengthAdjust="spacing" xml:space="preserve">alex — étudiant MSc @ Epitech</text>
+<g class="c1"><rect x="30" y="103" width="318.4" height="24" fill="#121419"/></g>
 <text x="30" y="150" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#ff9b21">$</text>
 <text x="49.2" y="150" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#f4f4f5" textLength="124.8" lengthAdjust="spacing" xml:space="preserve">cat stack.txt</text>
 <g class="c2"><rect x="30" y="133" width="184.0" height="24" fill="#121419"/><g class="v2"><rect class="blink" x="30" y="135" width="9.6" height="20" fill="#ff9b21"/></g></g>
@@ -51,8 +51,8 @@
 <text x="30" y="210" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#ff9b21">$</text>
 <text x="49.2" y="210" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#f4f4f5" textLength="124.8" lengthAdjust="spacing" xml:space="preserve">./focus --now</text>
 <g class="c4"><rect x="30" y="193" width="184.0" height="24" fill="#121419"/><g class="v4"><rect class="blink" x="30" y="195" width="9.6" height="20" fill="#ff9b21"/></g></g>
-<text x="30.0" y="240" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#9ba1a9" textLength="499.2" lengthAdjust="spacing" xml:space="preserve">cybersécurité · devsecops · tryhackme · hack the box</text>
-<g class="c5"><rect x="30" y="223" width="539.2" height="24" fill="#121419"/></g>
+<text x="30.0" y="240" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#9ba1a9" textLength="240.0" lengthAdjust="spacing" xml:space="preserve">cybersécurité · devsecops</text>
+<g class="c5"><rect x="30" y="223" width="280.0" height="24" fill="#121419"/></g>
 <g class="last"><text x="30" y="270" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#ff9b21">$</text><rect class="blink" x="49.2" y="255" width="9.6" height="20" fill="#ff9b21"/></g>
   </g>
 </svg>
